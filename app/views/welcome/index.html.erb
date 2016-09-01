@@ -1,0 +1,45 @@
+<h1><u>Welcome to the Index page.</u></h1>
+<h3> A list of available options: </h3>
+
+<strong><%= link_to("Admin Login",{:action => 'admin'}) %></strong>
+<strong>
+<br><p>
+<% @rightwidgets.each do |t| %>
+<%= "Content : "+t.content %><br>
+<%= "Title : "+t.title %><br>
+<%= "Created At : "+t.created_at.to_s %><br>
+<%= "Updated At : "+t.updated_at.to_s %><br><br>
+<%  end %></p>
+</strong>
+
+<strong>
+<br><p>
+<% @blogs.each do |t| %>
+<%= "Content : "+t.content %><br>
+<%= "Title : "+t.title %><br>
+<%= "Created At : "+t.created_at.to_s %><br>
+<%= "Updated At : "+t.updated_at.to_s %><br><br>
+<%  end %></p>
+</strong>
+
+<strong>
+<br><p>
+<% @navigations.each do |t| %>
+<%= "Name : "+t.name %><br>
+<%= "Position : "+t.pos.to_s %><br>
+<%= "Created At : "+t.created_at.to_s %><br>
+<%= "Updated At : "+t.updated_at.to_s %><br><br>
+<%  end %></p>
+</strong>
+
+<strong>
+<br><p>
+<% @events.each do |t| %>
+<%= "Name : "+t.name %><br>
+<%= "Date : "+t.date.to_s %><br>
+<%= "Timing : "+t.timing.to_s %><br>
+<%= "Venue : "+t.venue %><br>
+<%= "Created At : "+t.created_at.to_s %><br>
+<%= "Updated At : "+t.updated_at.to_s %><br><br>
+<%  end %></p>
+</strong>
