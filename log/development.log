@@ -2705,3 +2705,5 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 177ms (Views: 161.8ms | ActiveRecord: 1.2ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.1. (called from block in <top (required)> at /media/abhishek/BC189C64189C2006/project/ruby/Rails/Summer_Project/ieee2/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.1. (called from block in <top (required)> at /media/abhishek/BC189C64189C2006/project/ruby/Rails/Summer_Project/ieee2/config/routes.rb:9)
