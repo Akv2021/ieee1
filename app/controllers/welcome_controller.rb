@@ -8,7 +8,18 @@ def index
 end
 
 def admin
+end
 
+def what
+end
+
+def join
+end
+
+def benefits
+end
+
+def resource
 end
 
 end
