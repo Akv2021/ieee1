@@ -1,20 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Imageurl:</strong>
-  <%= @blog.imageurl %>
-</p>
+<h5><%= @blog.title %></h5>
+
 
 <p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
+  
+  <img class="image-responsive" src="<%= @blog.imageurl %>" style="width: 100%;" > 
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
+<p>  
+  <%= @blog.content.html_safe %>
 </p>
 
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+
+<%# link_to 'Edit', edit_blog_path(@blog) %> 
+<%# link_to 'Back', blogs_path %>

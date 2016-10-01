@@ -1,45 +1,144 @@
-<h1><u>Welcome to the Index page.</u></h1>
-<h3> A list of available options: </h3>
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<h4 id="blogsheading">Blogs and More</h4>
+				</div>
+			</div>
 
-<strong><%= link_to("Admin Login",{:action => 'admin'}) %></strong>
-<strong>
-<br><p>
-<% @rightwidgets.each do |t| %>
-<%= "Content : "+t.content %><br>
-<%= "Title : "+t.title %><br>
-<%= "Created At : "+t.created_at.to_s %><br>
-<%= "Updated At : "+t.updated_at.to_s %><br><br>
-<%  end %></p>
-</strong>
+			<% @blogs.each do |t| %>
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="card horizontal">
+						<div class="card-image" style="width: 20%;">
+							<img src="<%= t.imageurl %>" class="responsive-img" id="blog-image" style="width: 100%;">
+						</div>
+						<div class="card-stacked">
+							<div class="card-content" id="blog-content">
+							<p>
+								<h5><%= t.title %></h5>
+								<p><%= t.content.truncate(80).html_safe %></p>
+							</p>
+							</div>				
+							<div class="card-action">
+								<a href="/blogs/<%=t.id%>"><h6 id="card-read-more">Read More</h6></a>
+								<h7 id="card-date">Posted on <%= t.created_at.to_s %></h7>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%  end %>
 
-<strong>
-<br><p>
-<% @blogs.each do |t| %>
-<%= "Content : "+t.content %><br>
-<%= "Title : "+t.title %><br>
-<%= "Created At : "+t.created_at.to_s %><br>
-<%= "Updated At : "+t.updated_at.to_s %><br><br>
-<%  end %></p>
-</strong>
 
-<strong>
-<br><p>
-<% @navigations.each do |t| %>
-<%= "Name : "+t.name %><br>
-<%= "Position : "+t.pos.to_s %><br>
-<%= "Created At : "+t.created_at.to_s %><br>
-<%= "Updated At : "+t.updated_at.to_s %><br><br>
-<%  end %></p>
-</strong>
+<!-- 			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="card horizontal">
+						<div class="card-image">
+							<img src="images/TreeAndSky.jpg" class="responsive-img" id="blog-image">
+						</div>
+						<div class="card-stacked">
+							<div class="card-content" id="blog-content">
+							<p>
+								<h5>Boot Camp in MSIT</h5>
+								<p>IEEE MSIT is gong to organise a programming bootcamp on 13 August 2016. The students have to register to participate in the programming bootcamp. This kickstarting programming seesion will be taken by Ankush who is an alumni of IIT Delhi.</p>
+							</p>
+							</div>				
+							<div class="card-action">
+								<a href="#"><h6 id="card-read-more">Read More</h6></a>
+								<h7 id="card-date">Posted on 10th August 2016</h7>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="card horizontal">
+						<div class="card-image">
+							<img src="images/TreeAndSky.jpg" class="responsive-img" id="blog-image">
+						</div>
+						<div class="card-stacked">
+							<div class="card-content" id="blog-content">
+							<p>
+								<h5>Boot Camp in MSIT</h5>
+								<p>IEEE MSIT is gong to organise a programming bootcamp on 13 August 2016. The students have to register to participate in the programming bootcamp. This kickstarting programming seesion will be taken by Ankush who is an alumni of IIT Delhi.</p>
+							</p>
+							</div>				
+							<div class="card-action">
+								<a href="#"><h6 id="card-read-more">Read More</h6></a>
+								<h7 id="card-date">Posted on 10th August 2016</h7>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="card horizontal">
+						<div class="card-image">
+							<img src="images/TreeAndSky.jpg" class="responsive-img" id="blog-image">
+						</div>
+						<div class="card-stacked">
+							<div class="card-content" id="blog-content">
+							<p>
+								<h5>Boot Camp in MSIT</h5>
+								<p>IEEE MSIT is gong to organise a programming bootcamp on 13 August 2016. The students have to register to participate in the programming bootcamp. This kickstarting programming seesion will be taken by Ankush who is an alumni of IIT Delhi.</p>
+							</p>
+							</div>				
+							<div class="card-action">
+								<a href="#"><h6 id="card-read-more">Read More</h6></a>
+								<h7 id="card-date">Posted on 10th August 2016</h7>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+ -->
 
-<strong>
-<br><p>
-<% @events.each do |t| %>
-<%= "Name : "+t.name %><br>
-<%= "Date : "+t.date.to_s %><br>
-<%= "Timing : "+t.timing.to_s %><br>
-<%= "Venue : "+t.venue %><br>
-<%= "Created At : "+t.created_at.to_s %><br>
-<%= "Updated At : "+t.updated_at.to_s %><br><br>
-<%  end %></p>
-</strong>
+
+<div>
+	<h1><u>Welcome to the Index page.</u></h1>
+	<h3> A list of available options: </h3>
+
+	<strong><%= link_to("Admin Login",{:action => 'admin'}) %></strong>
+	<strong>
+	<br><p>
+	<% @rightwidgets.each do |t| %>
+	<%= "Content : "+t.content %><br>
+	<%= "Title : "+t.title %><br>
+	<%= "Created At : "+t.created_at.to_s %><br>
+	<%= "Updated At : "+t.updated_at.to_s %><br><br>
+	<%  end %></p>
+	</strong>
+
+	<strong>
+	<br><p>
+	<% @blogs.each do |t| %>
+	<%= "Content : "+t.content %><br>
+	<%= "Title : "+t.title %><br>
+	<%= "Created At : "+t.created_at.to_s %><br>
+	<%= "Updated At : "+t.updated_at.to_s %><br><br>
+	<%  end %></p>
+	</strong>
+
+	<strong>
+	<br><p>
+	<%# @navigations.each do |t| %>
+	<%# "Name : "+t.name %><br>
+	<%# "Position : "+t.pos.to_s %><br>
+	<%# "Created At : "+t.created_at.to_s %><br>
+	<%# "Updated At : "+t.updated_at.to_s %><br><br>
+	<%#  end %></p>
+	</strong>
+
+	<strong>
+	<br><p>
+	<% @events.each do |t| %>
+	<%= "Name : "+t.name %><br>
+	<%= "Date : "+t.date.to_s %><br>
+	<%= "Timing : "+t.timing.to_s %><br>
+	<%= "Venue : "+t.venue %><br>
+	<%= "Created At : "+t.created_at.to_s %><br>
+	<%= "Updated At : "+t.updated_at.to_s %><br><br>
+	<%  end %></p>
+	</strong>
+</div>
